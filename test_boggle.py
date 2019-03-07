@@ -18,6 +18,7 @@ class TestBoggle(unittest.TestCase):
         grid = boggle.make_grid(0,0)
         self.assertEqual(len(grid),0)
         
+        
     def test_grid_size_is_width_times_height(self):
         """
         
@@ -28,3 +29,20 @@ class TestBoggle(unittest.TestCase):
         
         grid = boggle.make_grid(2,3)
         self.assertEqual(len(grid),6)
+        
+        
+              
+    def test_grid_coordinates(self):
+        grid = boggle.make_grid(2, 2)
+        self.assertIn((0, 0), grid)
+        self.assertIn((0, 1), grid)
+        self.assertIn((1, 0), grid)
+        self.assertIn((1, 1), grid)
+        self.assertNotIn((2, 2), grid)
+        
+        
+        
+        
+        
+        
+        
